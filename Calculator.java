@@ -1,7 +1,7 @@
 import java.awt.*;
 import java.awt.event.*;
 public class Calculator implements ActionListener{
-    int c,n;
+    double c,n;
     String string1,string2,string3,string4,string5;
     Frame frame;
     Button button0,button1,button2,button3,button4,button5,button6,button7,button8,button9,
@@ -197,19 +197,19 @@ public class Calculator implements ActionListener{
         if (e.getSource()==buttonEqu){
             string2 = textField.getText();
             if (c == 1){
-                n = Integer.parseInt(string1) + Integer.parseInt(string2);
+                n = Double.parseDouble(string1) + Double.parseDouble(string2);
                 textField.setText(String.valueOf(n));
             }
             if (c == 2){
-                n = Integer.parseInt(string1) * Integer.parseInt(string2);
+                n = Double.parseDouble(string1) * Double.parseDouble(string2);
                 textField.setText(String.valueOf(n));
             }
             if (c == 3){
-                n = Integer.parseInt(string1) / Integer.parseInt(string2);
+                n = Double.parseDouble(string1) / Double.parseDouble(string2);
                 textField.setText(String.valueOf(n));
             }
             if (c == 4){
-                n = Integer.parseInt(string1) - Integer.parseInt(string2);
+                n = Double.parseDouble(string1) - Double.parseDouble(string2);
                 textField.setText(String.valueOf(n));
             }
         }
